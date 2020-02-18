@@ -20,6 +20,7 @@ class OpsiServiceProvider extends ServiceProvider
 
             $this->commands([
                 \Riipandi\LaravelOpsi\Console\OpsiSetCommand::class,
+                \Riipandi\LaravelOpsi\Console\OpsiGetCommand::class,
             ]);
         }
 
