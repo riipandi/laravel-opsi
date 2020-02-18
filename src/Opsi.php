@@ -40,7 +40,9 @@ class Opsi extends Model
      */
     public function get($key, $default = null)
     {
-        $opsi = self::where('key', $key)->first() ?: return $opsi->value;
+        if ($opsi = self::where('key', $key)->first()) {
+            return $opsi->value;
+        }
 
         return $default;
     }
