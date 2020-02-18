@@ -1,0 +1,49 @@
+{
+    "name": "riipandi/laravel-opsi",
+    "description": "Put your Laravel application settings in database.",
+    "keywords": [ "laravel", "options", "settings", "configuration" ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [{
+        "name": "Aris Ripandi",
+        "email": "aris@ripandi.id"
+    }],
+    "require": {
+        "php": ">=7.2.1",
+        "illuminate/support": "^5.8|^6.0",
+        "illuminate/database": "^5.8|^6.0"
+    },
+    "require-dev": {
+        "orchestra/database": "^4.2",
+        "orchestra/testbench": "~4.6"
+    },
+    "autoload": {
+        "files": [
+            "src/helper.php"
+        ],
+        "psr-4": {
+            "Riipandi\\LaravelOpsi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Riipandi\\LaravelOpsi\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Riipandi\\LaravelOpsi\\OpsiServiceProvider"
+            ],
+            "aliases": {
+                "Opsi": "Riipandi\\LaravelOpsi\\OpsiFacade"
+            }
+        }
+    }
+}

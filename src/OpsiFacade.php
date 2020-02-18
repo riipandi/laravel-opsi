@@ -1,0 +1,18 @@
+<?php
+
+namespace Riipandi\LaravelOpsi;
+
+use Illuminate\Support\Facades\Facade;
+
+class OpsiFacade extends Facade
+{
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'opsi';
+    }
+}
